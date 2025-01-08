@@ -14,11 +14,12 @@ public class RadioButton extends BaseClass {
     @BeforeTest
     public void startUp(){
         init();
+        driver.get("https://demoqa.com/radio-button");
+        driver.manage().window().maximize();
     }
     @Test
     public void test(){
-        driver.get("https://demoqa.com/radio-button");
-        driver.manage().window().maximize();
+
 
         driver.findElement(By.xpath("//input[@id = 'yesRadio']//parent::div")).click();
         System.out.println(driver.findElement(By.xpath("//p//span")).getText());

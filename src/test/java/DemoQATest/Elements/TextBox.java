@@ -23,11 +23,12 @@ public class TextBox extends BaseClass {
     @BeforeTest
     public void startUp(){
         init();
+        driver.get("https://demoqa.com/text-box");
+        driver.manage().window().maximize();
     }
     @Test
     public void test(){
-        driver.get("https://demoqa.com/text-box");
-        driver.manage().window().maximize();
+
 
         driver.findElement(By.id("userName")).sendKeys(userName);
         driver.findElement(By.id("userEmail")).sendKeys(email);
